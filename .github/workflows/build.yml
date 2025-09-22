@@ -567,7 +567,7 @@ jobs:
       - name: Download toolchain
         if: steps.toolchain_cache.outputs.cache-hit != 'true'
         run: |
-          wget https://more.musl.cc/x86_64-linux-musl/i486-linux-musl-cross.tgz -O i486-linux-musl-cross.tgz
+          wget https://more.musl.cc/x86_64-linux-musl/${{ matrix.triple }}-cross.tgz -O ${{ matrix.triple }}-cross.tgz
 
       - name: Setup environment
         run: |
