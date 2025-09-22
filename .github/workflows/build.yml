@@ -332,7 +332,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: palera1n-${{ matrix.os }}-${{ matrix.arch }}
-          path: ready/
+          path: ready1/
 
       - name: Upload ${{ matrix.os }} thin ${{ matrix.arch }} build
         if: ${{ github.event_name != 'pull_request' }}
@@ -497,8 +497,8 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         uses: actions/upload-artifact@v4
         with:
-          name: ready1
-          path: ready1/
+          name: ready2
+          path: ready2/
 
   build-Linux:
     strategy:
@@ -831,8 +831,8 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         uses: actions/upload-artifact@v4
         with:
-          name: ready2
-          path: ready2/
+          name: ready3
+          path: ready3/
 
       - name: Upload usbmuxd artifact
         if: ${{ github.event_name != 'pull_request' }}
